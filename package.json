@@ -4,7 +4,7 @@
   "description": "tiga card",
   "author": "tiga bilgi teknolojileri",
   "license": "MIT",
-  "repository": "tiga-components/card",
+  "repository": "test-components/card",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
