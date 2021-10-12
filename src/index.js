@@ -1,9 +1,6 @@
-import CustomTabPanel from "./CustomTabPanel.jsx";
+import React from 'react'
+import styles from './styles.module.css'
 
-const returnLibrary = () => {
-  return {
-    CustomTabPanel: CustomTabPanel,
-    // you can add here other components that you want to export
-  };
-};
-export default returnLibrary();
+export const ExampleComponent = ({ text }) => {
+  return <div className={styles.test}>Example Component: {text}</div>
+}
