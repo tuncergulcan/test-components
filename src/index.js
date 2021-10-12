@@ -1,9 +1,9 @@
-import CustomTabPanel from "./components/CustomTabPanel";
+import AwesomeButton from './button.js'
 
 const returnLibrary = () => {
-  return {
-    CustomTabPanel: CustomTabPanel,
-    // you can add here other components that you want to export
-  };
-};
-export default returnLibrary();
+    return {
+        AwesomeButton: AwesomeButton
+        // you can add here other components that you want to export
+    }
+}
+export default returnLibrary()
