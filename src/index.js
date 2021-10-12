@@ -1,4 +1,4 @@
-import CustomTabPanel from "./CustomTabPanel.js";
+import CustomTabPanel from "./CustomTabPanel.jsx";
 
 const returnLibrary = () => {
   return {
