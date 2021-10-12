@@ -1,107 +1,21 @@
 'use strict';
 
+var _slicedToArray = require('@babel/runtime/helpers/slicedToArray');
 var React = require('react');
 var reactstrap = require('reactstrap');
+var _extends = require('@babel/runtime/helpers/extends');
+var _defineProperty = require('@babel/runtime/helpers/defineProperty');
 var PropTypes = require('prop-types');
 var classNames = require('classnames');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends);
+var _defineProperty__default = /*#__PURE__*/_interopDefaultLegacy(_defineProperty);
 var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-function _iterableToArrayLimit(arr, i) {
-  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-
-  if (_i == null) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-
-  var _s, _e;
-
-  try {
-    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-  return arr2;
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
 
 var Title = function Title(_ref) {
   var TitleTag = _ref.titleTag,
@@ -109,7 +23,7 @@ var Title = function Title(_ref) {
       breakPoint = _ref.breakPoint,
       children = _ref.children;
   return /*#__PURE__*/React__default["default"].createElement(TitleTag, {
-    className: classNames__default["default"](_defineProperty({
+    className: classNames__default["default"](_defineProperty__default["default"]({
       'mb-0': !breakPoint
     }, "mb-".concat(breakPoint, "-0"), !!breakPoint), className)
   }, children);
@@ -143,7 +57,7 @@ var FalconCardHeader = function FalconCardHeader(_ref2) {
     breakPoint: breakPoint,
     titleTag: titleTag,
     className: titleClass
-  }, title)), /*#__PURE__*/React__default["default"].createElement(reactstrap.Col, _extends({}, _defineProperty({}, breakPoint ? breakPoint : 'xs', 'auto'), {
+  }, title)), /*#__PURE__*/React__default["default"].createElement(reactstrap.Col, _extends__default["default"]({}, _defineProperty__default["default"]({}, breakPoint ? breakPoint : 'xs', 'auto'), {
     className: "text".concat(breakPoint ? "-".concat(breakPoint) : '', "-right")
   }), children)) : /*#__PURE__*/React__default["default"].createElement(Title, {
     breakPoint: breakPoint,
@@ -173,7 +87,7 @@ var CustomTabPanel = function CustomTabPanel(props) {
       DefaultActiveTabID = props.DefaultActiveTabID;
 
   var _useState = React.useState(DefaultActiveTabID),
-      _useState2 = _slicedToArray(_useState, 2),
+      _useState2 = _slicedToArray__default["default"](_useState, 2),
       activeTab = _useState2[0],
       setActiveTab = _useState2[1];
 
@@ -181,7 +95,7 @@ var CustomTabPanel = function CustomTabPanel(props) {
     if (activeTab !== tab) setActiveTab(tab);
   };
 
-  return /*#__PURE__*/React__default["default"].createElement(React.Fragment, null, /*#__PURE__*/React__default["default"].createElement(reactstrap.Card, null, /*#__PURE__*/React__default["default"].createElement(FalconCardHeader, {
+  return /*#__PURE__*/React__default["default"].createElement(reactstrap.Card, null, /*#__PURE__*/React__default["default"].createElement(FalconCardHeader, {
     className: "HeaderTab",
     light: CardHeaderLight,
     title: /*#__PURE__*/React__default["default"].createElement(React.Fragment, null, CardIcon, CardHeader)
@@ -206,15 +120,16 @@ var CustomTabPanel = function CustomTabPanel(props) {
     }, /*#__PURE__*/React__default["default"].createElement(reactstrap.TabPane, {
       tabId: item.TabId
     }, item.TabOnDemand === true ? activeTab === item.TabId && item.TabComponent : item.TabComponent));
-  }))));
+  })));
 };
 
-var TigaTabPanelComponents = function TigaTabPanelComponents() {
+var returnLibrary = function returnLibrary() {
   return {
-    CustomTabPanel: CustomTabPanel
+    CustomTabPanel: CustomTabPanel // you can add here other components that you want to export
+
   };
 };
 
-var index = TigaTabPanelComponents();
+var index = returnLibrary();
 
 module.exports = index;

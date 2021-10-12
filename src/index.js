@@ -1,8 +1,9 @@
-import CustomTabPanel from "./components/tab-panel";
+import CustomTabPanel from "./components/CustomTabPanel";
 
-const TigaTabPanelComponents = () => {
+const returnLibrary = () => {
   return {
     CustomTabPanel: CustomTabPanel,
+    // you can add here other components that you want to export
   };
 };
-export default TigaTabPanelComponents();
+export default returnLibrary();
